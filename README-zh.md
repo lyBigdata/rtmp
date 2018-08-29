@@ -7,17 +7,17 @@ HLS实时流媒体的默认设置。 建立在Alpine Linux上。
 * ffmpeg 3.4.2 (compiled from source)
 * Default HLS settings (See: [nginx.conf](nginx.conf))
 
-[![Docker Stars](https://img.shields.io/docker/stars/alfg/nginx-rtmp.svg)](https://hub.docker.com/r/alfg/nginx-rtmp/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/alfg/nginx-rtmp.svg)](https://hub.docker.com/r/alfg/nginx-rtmp/)
-[![Docker Automated build](https://img.shields.io/docker/automated/alfg/nginx-rtmp.svg)](https://hub.docker.com/r/alfg/nginx-rtmp/builds/)
-[![Build Status](https://travis-ci.org/alfg/docker-nginx-rtmp.svg?branch=master)](https://travis-ci.org/alfg/docker-nginx-rtmp)
+[![Docker Stars](https://img.shields.io/docker/stars/alfg/nginx-rtmp.svg)](https://hub.docker.com/r/jun3/rtmp/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/alfg/nginx-rtmp.svg)](https://hub.docker.com/r/jun3/rtmp/)
+[![Docker Automated build](https://img.shields.io/docker/automated/alfg/nginx-rtmp.svg)](https://hub.docker.com/r/jun3/rtmp/builds/)
+<!-- [![Build Status](https://travis-ci.org/alfg/docker-nginx-rtmp.svg?branch=master)](https://travis-ci.org/alfg/docker-nginx-rtmp) -->
 
 ## 用法:
 
 ### 服务端
 * 拉取docker镜像并运行:
 ```
-docker pull alfg/nginx-rtmp
+docker pull jun3/rtmp
 docker run -it -p 1935:1935 -p 8080:80 --rm jun3/rtmp
 ```
 或者 
