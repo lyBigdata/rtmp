@@ -14,14 +14,14 @@ HLS实时流媒体的默认设置。 建立在Alpine Linux上。
 * 拉取docker镜像并运行:
 ```
 docker pull jun3/rtmp
-docker run -it -p 1935:1935 -p 8080:80 --rm jun3/rtmp
+docker run --name rtmp -p 1935:1935 -p 8080:80 -d -it jun3/rtmp
 ```
 或者 
 
 * 构建docker镜像并运行:
 ```
 docker build -t jun3/rtmp .
-docker run -it -p 1935:1935 -p 8080:80 --rm jun3/rtmp
+docker run --name rtmp -p 1935:1935 -p 8080:80 -d -it jun3/rtmp
 ```
 
 * 将实时内容串流到服务端:
