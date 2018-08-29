@@ -43,7 +43,7 @@ rtmp://<server ip>:1935/stream/$STREAM_NAME
 ```
 http://<server ip>:8080/live/$STREAM_NAME.m3u8
 ```
-* 例: `http://localhost:8080/live/hello.m3u8`
+* 例如: `http://localhost:8080/live/hello.m3u8`
 
 
 ### FFMPEG构建
