@@ -2,10 +2,10 @@
 一个Dockerfile从源代码安装NGINX，nginx-rtmp-module和FFmpeg
 HLS实时流媒体的默认设置。 建立在Alpine Linux上。
 
-* Nginx 1.13.9 (compiled from source)
-* nginx-rtmp-module 1.2.1 (compiled from source)
-* ffmpeg 3.4.2 (compiled from source)
-* Default HLS settings (See: [nginx.conf](nginx.conf))
+* Nginx 1.15.3 (从源代码编译)
+* nginx-rtmp-module 1.2.1 (从源代码编译)
+* ffmpeg 4.0.2 (从源代码编译)
+* 默认HLS设置(见: [nginx.conf](nginx.conf))
 
 
 ## 用法:
