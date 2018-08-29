@@ -1,52 +1,48 @@
 # docker nginx rtmp
-A Dockerfile installing NGINX, nginx-rtmp-module and FFmpeg from source with
-default settings for HLS live streaming. Built on Alpine Linux.
+一个Dockerfile从源代码安装NGINX，nginx-rtmp-module和FFmpeg
+HLS实时流媒体的默认设置。 建立在Alpine Linux上。
 
 * Nginx 1.13.9 (compiled from source)
 * nginx-rtmp-module 1.2.1 (compiled from source)
 * ffmpeg 3.4.2 (compiled from source)
 * Default HLS settings (See: [nginx.conf](nginx.conf))
 
-[![Docker Stars](https://img.shields.io/docker/stars/alfg/nginx-rtmp.svg)](https://hub.docker.com/r/jun3/rtmp/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/alfg/nginx-rtmp.svg)](https://hub.docker.com/r/jun3/rtmp/)
-[![Docker Automated build](https://img.shields.io/docker/automated/alfg/nginx-rtmp.svg)](https://hub.docker.com/r/jun3/rtmp/builds/)
-<!-- [![Build Status](https://travis-ci.org/alfg/docker-nginx-rtmp.svg?branch=master)](https://travis-ci.org/alfg/docker-nginx-rtmp) -->
 
-## Usage
+## 用法:
 
-### Server
-* Pull docker image and run:
+### 服务端
+* 拉取docker镜像并运行:
 ```
 docker pull jun3/rtmp
 docker run -it -p 1935:1935 -p 8080:80 --rm jun3/rtmp
 ```
-or 
+或者 
 
-* Build and run container from source:
+* 构建docker镜像并运行:
 ```
 docker build -t jun3/rtmp .
 docker run -it -p 1935:1935 -p 8080:80 --rm jun3/rtmp
 ```
 
-* Stream live content to:
+* 将实时内容串流到服务端:
 ```
 rtmp://<server ip>:1935/stream/$STREAM_NAME
 ```
 
-### OBS Configuration
-* Stream Type: `Custom Streaming Server`
-* URL: `rtmp://localhost:1935/stream`
-* Stream Key: `hello`
+### OBS配置
+* 流类型: `自定义流媒体服务器`
+* 流地址: `rtmp://localhost:1935/stream`
+* 流密钥: `hello`
 
-### Watch Stream
-* In Safari, VLC or any HLS player, open:
+### 观看流
+* 在Safari，VLC或任何HLS播放器中，打开:
 ```
 http://<server ip>:8080/live/$STREAM_NAME.m3u8
 ```
-* Example: `http://localhost:8080/live/hello.m3u8`
+* 例如: `http://localhost:8080/live/hello.m3u8`
 
 
-### FFmpeg Build
+### FFMPEG构建
 ```
 ffmpeg version 3.4.2 Copyright (c) 2000-2018 the FFmpeg developers
   built with gcc 5.3.0 (Alpine 5.3.0)
@@ -84,7 +80,7 @@ ffmpeg version 3.4.2 Copyright (c) 2000-2018 the FFmpeg developers
     --disable-debug
 ```
 
-## Resources
+## 资源
 * https://alpinelinux.org/
 * http://nginx.org
 * https://github.com/arut/nginx-rtmp-module
